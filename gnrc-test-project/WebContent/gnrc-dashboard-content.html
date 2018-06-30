@@ -30,6 +30,7 @@
 
 <!-- <link rel="stylesheet" href="css/app.css"> -->
 <link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/index.css">
 <!-- End of CSS -->
 </head>
 <body>
@@ -47,10 +48,9 @@
 							class="hidden-xs hidden-sm">Dashboard</span>
 					</a></li>
 
-					<li class="link"><a href="#collapse-hr"
-						data-toggle="collapse" aria-controls="collapse-hr"> <i
-							class="far fa-id-card"></i> <span class="hidden-xs hidden-sm">Human
-								Resource</span>
+					<li class="link"><a href="#collapse-hr" data-toggle="collapse"
+						aria-controls="collapse-hr"> <i class="far fa-id-card"></i> <span
+							class="hidden-xs hidden-sm">Human Resource</span>
 					</a>
 
 						<ul class="collapse collapseable" id="collapse-hr">
@@ -69,14 +69,15 @@
 						</ul></li>
 
 					<li class="link"><a href="#collapse-registration"
-						data-toggle="collapse" aria-controls="collapse-registration"> <i
-							class="fas fa-plus"></i> <span class="hidden-xs hidden-sm">Registration</span>
+						data-toggle="collapse" aria-controls="collapse-registration">
+							<i class="fas fa-plus"></i> <span class="hidden-xs hidden-sm">Registration</span>
 
 					</a>
 
 						<ul class="collapse collapseable" id="collapse-registration">
-							<li><a href="gnrc-medical-reg.jsp">Medical Registration  </a></li>
-							<li><a href="#">Outdoor Registration  </a></li>
+							<li><a href="gnrc-medical-reg.jsp">Medical Registration
+							</a></li>
+							<li><a href="#">Outdoor Registration </a></li>
 							<li><a href="#">External Registration </a></li>
 							<li><a href="#">Indoor Registration </a></li>
 							<li><a href="#">Police Case Detail </a></li>
@@ -144,6 +145,104 @@
 						</div>
 					</header>
 				</div>
+
+				<!-- DASHBOARD -->
+				<div id="dashboard-con">
+					<div class="row">
+						<div class="col-md-9 dashboard-left-cell">
+							<div class="admin-content-con">
+								<header class="clearfix">
+									<h5 class="pull-left">Basic Info</h5>
+								</header>
+
+								<div class="row">
+									<div class="col-xs-4">
+										<input type="text" class="form-control input-sm"
+											name="mrd_number" placeholder="MRD Number">
+									</div>
+									<div class="col-xs-4">
+										<input type="text" class="form-control input-sm"
+											name="reg_date" placeholder="Registration Date">
+									</div>
+									<div class="col-xs-4">
+										<input type="text" class="form-control input-sm" name="status"
+											placeholder="Satus">
+									</div>
+								</div>
+								<br>
+								<div class="row">
+									<div class="col-xs-2">
+										<select data-placeholder="" name="" id="location"
+											class="form-control input-sm">
+											<option value="MR">MR</option>
+											<option value="MR">MRS</option>
+											<option value="MR">DR</option>
+										</select>
+
+									</div>
+									<div class="col-xs-4">
+										<input type="text" class="form-control input-sm"
+											name="first_name" placeholder="First Name">
+
+									</div>
+									<div class="col-xs-3">
+										<input type="text" class="form-control input-sm"
+											name="middle_name" placeholder="Middle Name">
+									</div>
+									<div class="col-xs-3">
+										<input type="text" class="form-control input-sm"
+											name="last_name" placeholder="Last Name">
+									</div>
+
+								</div>
+								<br>
+								<div class="row">
+									<div class="col-xs-3">
+										<select data-placeholder="" name="gender" id="gender"
+											class="form-control input-sm">
+											<option value="MALE">MALE</option>
+											<option value="FEMALE">FEMALE</option>
+										</select>
+									</div>
+
+									<div class="col-xs-3">
+										<input type="text" class="form-control input-sm"
+											name="dt_of_birth" placeholder="Date of Birth">
+									</div>
+
+									<div class="col-xs-3">
+										<input type="text" class="form-control input-sm" name="age"
+											placeholder="Age (Y/M/D)">
+									</div>
+
+									<div class="col-xs-3">
+										<select data-placeholder="" name="marital_status"
+											id="marital_status" class="form-control input-sm">
+											<option value="MARRIED">MARRIED</option>
+											<option value="UNMARRIED">UNMARRIED</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-3 dashboard-right-cell">
+							<div class="admin-content-con">
+								<header class="clearfix">
+									<h5 class="pull-left">Photo Upload</h5>
+								</header>
+								
+									<img id="blah" src="http://placehold.it/180" alt="your image" />
+									<input type='file' onchange="readURL(this);" />
+							
+							</div>
+						</div>
+					</div>
+					<div class="row"></div>
+				</div>
+
+
+
 
 
 

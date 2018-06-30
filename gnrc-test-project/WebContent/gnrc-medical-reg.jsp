@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>GNRC</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,6 +15,7 @@
 <!-- End of CSS -->
 </head>
 <body>
+
 
 	<div class="container-fluid display-table">
 		<div class="row display-table-row">
@@ -29,32 +30,39 @@
 							class="hidden-xs hidden-sm">Dashboard</span>
 					</a></li>
 
-					<li class="link"><a href="#collapse-post"
-						data-toggle="collapse" aria-controls="collapse-post"> <i
-							class="far fa-id-card"></i> <span class="hidden-xs hidden-sm">Human
-								Resource</span>
+					<li class="link"><a href="#collapse-hr" data-toggle="collapse"
+						aria-controls="collapse-hr"> <i class="far fa-id-card"></i> <span
+							class="hidden-xs hidden-sm">Human Resource</span>
 					</a>
 
-						<ul class="collapse collapseable" id="collapse-post">
+						<ul class="collapse collapseable" id="collapse-hr">
 							<li><a href="gnrc-create-user.jsp">User Create Request</a></li>
 						</ul></li>
 
 
-					<li class="link active"><a href="#collapse-comments"
-						data-toggle="collapse" aria-controls="collapse-comments"> <i
-							class="fas fa-desktop"></i></span> <span class="hidden-xs hidden-sm">Admin</span>
-
+					<li class="link"><a href="#collapse-admin"
+						data-toggle="collapse" aria-controls="collapse-admin"> <i
+							class="fas fa-desktop"></i><span class="hidden-xs hidden-sm">Admin</span>
 					</a>
 
-						<ul class="collapse collapseable" id="collapse-comments">
+						<ul class="collapse collapseable" id="collapse-admin">
 							<li><a href="gnrc-user-reg.jsp">User Registration</a></li>
-							<!-- <li><a href="new-article.html">Approved<span
-									class="label label-success pull-right hidden-xs hidden-sm">10</span></a></li>
-							<li><a href="new-article.html">Unapproved<span
-									class="label label-warning pull-right hidden-xs hidden-sm">10</span></a></li> -->
 						</ul></li>
 
 
+					<li class="link active"><a href="#collapse-registration"
+						data-toggle="collapse" aria-controls="collapse-registration">
+							<i class="fas fa-plus"></i> <span class="hidden-xs hidden-sm">Registration</span>
+
+					</a>
+
+						<ul class="collapse collapseable" id="collapse-registration">
+							<li><a href="#">Medical Registration </a></li>
+							<li><a href="#">Outdoor Registration </a></li>
+							<li><a href="#">External Registration </a></li>
+							<li><a href="#">Indoor Registration </a></li>
+							<li><a href="#">Police Case Detail </a></li>
+						</ul></li>
 
 
 					<li class="link"><a href="index5.jsp"> <span
@@ -123,81 +131,80 @@
 				<!-- Main Content -->
 				<div id="content">
 					<header>
-					<h2 class="page_title">User Registration</h2>
+					<h2 class="page_title">Medical Registration</h2>
 					</header>
 
 					<div class="content-inner">
 						<div class="form-wrapper">
 							<form>
-								<div class="form-group">
-									<label class="sr-only">User ID</label> <input type="text"
-										class="form-control" id="user_id" name="user_id"
-										placeholder="User ID">
+								<div class="row">
+									<div class="col-xs-4">
+										<input type="text" class="form-control" name="mrd_number"
+											placeholder="MRD Number">
+									</div>
+									<div class="col-xs-4">
+										<input type="text" class="form-control" name="reg_date"
+											placeholder="Registration Date">
+									</div>
+									<div class="col-xs-4">
+										<input type="text" class="form-control" name="status"
+											placeholder="Satus">
+									</div>
 								</div>
-
-								<div class="form-group">
-									<label class="sr-only">Password</label> <input type="password"
-										class="form-control" id="password" name="password"
-										placeholder="Password">
+								<br>
+								<div class="row">
+									<div class="col-xs-2">
+										<select data-placeholder="" name="" id="location"
+											class="form-control">
+											<option value="MR">MR</option>
+											<option value="MR">MRS</option>
+											<option value="MR">DR</option>
+										</select>
+									</div>
+									<div class="col-xs-3">
+										<input type="text" class="form-control" name="first_name"
+											placeholder="First Name">
+									</div>
+									<div class="col-xs-2">
+										<input type="text" class="form-control" name="middle_name"
+											placeholder="Middle Name">
+									</div>
+									<div class="col-xs-3">
+										<input type="text" class="form-control" name="last_name"
+											placeholder="Last Name">
+									</div>
+									<div class="col-xs-2">
+										<select data-placeholder="" name="gender" id="gender"
+											class="form-control">
+											<option value="MALE">MALE</option>
+											<option value="FEMALE">FEMALE</option>
+										</select>
+									</div>
 								</div>
-
-								<div class="form-group">
-									<label class="sr-only">Employee ID</label> <input type="text"
-										class="form-control" id="employee_id" name="employee_id"
-										placeholder="Employee ID">
-								</div>
-
-								<div class="form-group">
-									<label class="sr-only">Name</label> <input type="text"
-										class="form-control" id="name" name="name" placeholder="Name">
-								</div>
-
-
-								<div class="form-group">
-									<label for="role">Role</label> <select
-										data-placeholder="Select Roles" name="role" id="role"
-										class="form-control">
-										<option value="#">GNRC Dispur</option>
-										<option value="#">GNRC Six Mile</option>
-										<option value="#">GNRC North Guwahati</option>
-										<option value="#">GNRC Barasat</option>
-									</select>
-								</div>
-								<div class="form-group">
-									<label for="store">Store</label> <select
-										data-placeholder="Select tags" name="store" id="store"
-										class="form-control">
-										<option value="#">GNRC Dispur</option>
-										<option value="#">GNRC Six Mile</option>
-										<option value="#">GNRC North Guwahati</option>
-										<option value="#">GNRC Barasat</option>
-									</select>
-								</div>
-								<div class="form-group">
-									<label for="counter">Counter</label> <select
-										data-placeholder="Select Counter" name="counter"
-										class="form-control" id="counter">
-										<option value="#">GNRC Dispur</option>
-										<option value="#">GNRC Six Mile</option>
-										<option value="#">GNRC North Guwahati</option>
-										<option value="#">GNRC Barasat</option>
-									</select>
-								</div>
-
-								<div class="form-group">
-									<label for="location">Location</label> <input type="text"
-										class="form-control" id="location" name="location" placeholder="Location">
-								</div>
-
-
-
-								<div class="clearfix">
-									<button type="submit" class="btn btn-primary pull-right">Save
-										/ Request</button>
+								<br>
+								<div class="row">
+									<div class="col-xs-2">
+										<input type="text" class="form-control" name="date_of_birth" id="date_of_birth"
+											placeholder="DOB">
+									</div>
+									<div class="col-xs-2">
+										<input type="text" class="form-control" name="middle_name"
+											placeholder="Middle Name">
+									</div>
+									<div class="col-xs-3">
+										<input type="text" class="form-control" name="last_name"
+											placeholder="Last Name">
+									</div>
+									<div class="col-xs-2">
+										<select data-placeholder="" name="gender" id="gender"
+											class="form-control">
+											<option value="MALE">MALE</option>
+											<option value="FEMALE">FEMALE</option>
+										</select>
+									</div>
 								</div>
 
 							</form>
-
 						</div>
 
 					</div>
@@ -218,26 +225,6 @@
 		</div>
 
 	</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -269,5 +256,6 @@
 	</script>
 
 	<!-- End of JS -->
+
 </body>
 </html>
