@@ -730,9 +730,9 @@
 														.valueOf()
 														- birthday.valueOf();
 												var year_age = Math
-														.floor(differenceInMilisecond / 31536000000);
+														.floor(differenceInMilisecond / 31557600000);
 												var day_age = Math
-														.floor((differenceInMilisecond % 31536000000) / 86400000);
+														.floor((differenceInMilisecond % 31557600000) / 86400000);
 
 												if ((today.getMonth() == birthday
 														.getMonth())
@@ -765,7 +765,7 @@
 							var dy = 0;
 							
 
-							$('#age-yy').on("blur", function() {
+							$('#age-yy').keyup(function() {
 
 								  var monthNames = [
 									    "Jan", "Feb", "Mar",
@@ -774,9 +774,6 @@
 									    "Nov", "Dec"
 									  ];
 
-								  
-								
-									//alert($(this).val());
 									 	yr = $.trim($('#age-yy').val());
 									 	console.log(yr);
 							            mn = $.trim($('#age-mm').val());
@@ -784,23 +781,16 @@
 							            dy = $.trim($('#age-dd').val());
 							            console.log(dy);
 							            if (dy < 10) { dy = '0' + dy } if (mn < 10) { mn = '0' + mn }
-
-										var day = ((new Date().getDate())-dy);
-										console.log(day);
-										var monthIndex = new Date().getMonth()  - mn;
-										console.log(monthIndex);
-										var year = new Date().getFullYear() - yr;
-										console.log(year);
-
-										$('#fromDate').val(day + '-' + monthNames[Math.abs(monthIndex)] + '-' + year);
-
-										
-
-							            
-							           // $('.fromDate').val(new Date(new Date().getFullYear() - yr, new Date().getMonth()  - mn , (new Date().getDay()+3)-dy));
+							           
+										var todayTime = new Date(new Date().getFullYear() - yr, new Date().getMonth()  - mn , (new Date().getDay()+3)-dy);
+										var month = todayTime.getMonth() + 1;
+										var day = todayTime.getDate();
+										var year = todayTime.getFullYear();
+							           $('#fromDate').val(day+'-'+monthNames[month-1]+'-'+year);
+							           
 							});
 
-							$('#age-mm').on("blur", function() {
+							$('#age-mm').keyup(function() {
 
 								  var monthNames = [
 									    "Jan", "Feb", "Mar",
@@ -808,10 +798,6 @@
 									    "Aug", "Sep", "Oct",
 									    "Nov", "Dec"
 									  ];
-
-								  
-								
-									//alert($(this).val());
 									 	yr = $.trim($('#age-yy').val());
 									 	console.log(yr);
 							            mn = $.trim($('#age-mm').val());
@@ -820,24 +806,14 @@
 							            console.log(dy);
 							            if (dy < 10) { dy = '0' + dy } if (mn < 10) { mn = '0' + mn }
 
-										console.log("Today month : "  + new Date().getMonth());
-							            
-										var day = ((new Date().getDate())-dy);
-										console.log(day);
-										var monthIndex = new Date().getMonth()  - mn;
-										console.log(monthIndex);
-										var year = new Date().getFullYear() - yr;
-										console.log(year);
-
-										$('#fromDate').val(day + '-' + monthNames[Math.abs(monthIndex)] + '-' + year);
-
-										
-
-							            
-							           // $('.fromDate').val(new Date(new Date().getFullYear() - yr, new Date().getMonth()  - mn , (new Date().getDay()+3)-dy));
+										var todayTime = new Date(new Date().getFullYear() - yr, new Date().getMonth()  - mn , (new Date().getDay()+3)-dy);
+										var month = todayTime.getMonth() + 1;
+										var day = todayTime.getDate();
+										var year = todayTime.getFullYear();
+							           $('#fromDate').val(day+'-'+monthNames[month-1]+'-'+year);
 							});
 
-							$('#age-dd').on("blur", function() {
+							$('#age-dd').keyup(function() {
 
 								  var monthNames = [
 									    "Jan", "Feb", "Mar",
@@ -854,25 +830,14 @@
 							            dy = $.trim($('#age-dd').val());
 							            
 							            if (dy < 10) { dy = '0' + dy } if (mn < 10) { mn = '0' + mn }
-							            console.log(yr);
-							            console.log(mn);
-							            console.log(dy);
-							            
-							            console.log("ToDay : " + new Date().getDa());
 
-										var day = ((new Date().getDate())-dy);
-										console.log(day);
-										var monthIndex = new Date().getMonth()  - mn;
-										console.log(monthIndex);
-										var year = new Date().getFullYear() - yr;
-										console.log(year);
-
-										$('#fromDate').val(day + '-' + monthNames[Math.abs(monthIndex)] + '-' + year);
-
+										var todayTime = new Date(new Date().getFullYear() - yr, new Date().getMonth()  - mn , (new Date().getDay()+3)-dy);
+										var month = todayTime.getMonth() + 1;
+										var day = todayTime.getDate();
+										var year = todayTime.getFullYear();
 										
-
+										$('#fromDate').val(day+'-'+monthNames[month-1]+'-'+year);
 							            
-							           // $('.fromDate').val(new Date(new Date().getFullYear() - yr, new Date().getMonth()  - mn , (new Date().getDay()+3)-dy));
 							});
 
 					
