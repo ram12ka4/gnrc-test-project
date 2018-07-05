@@ -30,18 +30,19 @@
 
 <!-- <link rel="stylesheet" href="css/app.css"> -->
 <link rel="stylesheet" href="css/dashboard.css">
-<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/gnrc-user-reg.css">
 <!-- End of CSS -->
 </head>
 <body>
 
+<!-- Side bar, Header, Main Content, Footer -->
 	<div class="container-fluid display-table">
 		<div class="row display-table-row">
 			<!-- side menu -->
 			<div
 				class="col-md-2 col-sm-1 hidden-xs display-table-cell valign-top"
 				id="side-menu">
-				<h1 class="hidden-xs hidden-sm">Navigation</h1>
+				<h1 class="hidden-xs hidden-sm">GNRC</h1>
 				<ul>
 					<li class="link active"><a href="index5.jsp"> <span
 							class="glyphicon glyphicon-th" aria-hidden="true"></span> <span
@@ -145,96 +146,113 @@
 						</div>
 					</header>
 				</div>
-			
-			
+
+
 				<!-- User Registration Form -->
 				<form action="" method="post">
 
 					<!-- DASHBOARD -->
 					<div id="dashboard-con">
 						<div class="row">
-							<div class="col-md-9 dashboard-left-cell">
+							<div class="col-md-10 dashboard-left-cell">
 								<div class="admin-content-con">
 									<header class="clearfix">
 										<h5 class="pull-left">Basic Info</h5>
 									</header>
 
-									<div class="row">
-										<div class="col-xs-4">
-											<input type="text" class="form-control input-sm"
-												name="mrd_number" placeholder="MRD Number">
-										</div>
-										<div class="col-xs-4">
-											<input type="text" class="form-control input-sm"
-												name="reg_date" placeholder="Registration Date">
-										</div>
-										<div class="col-xs-4">
-											<input type="text" class="form-control input-sm"
-												name="status" placeholder="Satus">
-										</div>
-									</div>
-									<br>
-									<div class="row">
-										<div class="col-xs-2">
-											<select data-placeholder="" name="" id="location"
-												class="form-control input-sm">
-												<option value="MR">MR</option>
-												<option value="MR">MRS</option>
-												<option value="MR">DR</option>
-											</select>
 
-										</div>
-										<div class="col-xs-4">
-											<input type="text" class="form-control input-sm"
-												name="first_name" placeholder="First Name">
+									<div class="form-horizontal">
 
-										</div>
-										<div class="col-xs-3">
-											<input type="text" class="form-control input-sm"
-												name="middle_name" placeholder="Middle Name">
-										</div>
-										<div class="col-xs-3">
-											<input type="text" class="form-control input-sm"
-												name="last_name" placeholder="Last Name">
+										<div class="form-group">
+											<label class="control-label col-xs-1" for="mrd"> MRD:</label>
+											<div class="col-xs-2">
+												<input type="text" class="form-control input-sm" id="mrd"
+													name="mrd_number" placeholder="MRD Number">
+											</div>
+
+											<label class="control-label col-xs-2" for="reg_date">
+												Registration Date:</label>
+											<div class="col-xs-3">
+												<input type="text" class="form-control input-sm"
+													id="reg_date" name="reg_date"
+													placeholder="Registration Date">
+											</div>
+											<label class="control-label col-xs-1" for="status">
+												Status:</label>
+											<div class="col-xs-3">
+												<input type="text" class="form-control input-sm" id="status"
+													name="status" placeholder="Status">
+											</div>
 										</div>
 
-									</div>
-									<br>
-									<div class="row">
-										<div class="col-xs-3">
-											<select data-placeholder="" name="gender" id="gender"
-												class="form-control input-sm">
-												<option value="GENDER" selected="selected">Select
-													Gender</option>
-												<option value="MALE">MALE</option>
-												<option value="FEMALE">FEMALE</option>
-											</select>
+
+
+										<div class="form-group">
+											<label class="control-label col-xs-1" for="title">
+												Title:</label>
+											<div class="col-xs-2">
+												<select data-placeholder="" name="title" id="title"
+													class="form-control input-sm">
+													<option value="MR">MR</option>
+													<option value="MR">MRS</option>
+													<option value="MR">DR</option>
+												</select>
+											</div>
+											<div class="col-xs-3">
+												<input type="text" class="form-control input-sm"
+													name="first_name" placeholder="First Name">
+
+											</div>
+											<div class="col-xs-3">
+												<input type="text" class="form-control input-sm"
+													name="middle_name" placeholder="Middle Name">
+											</div>
+											<div class="col-xs-3">
+												<input type="text" class="form-control input-sm"
+													name="last_name" placeholder="Last Name">
+											</div>
 										</div>
 
-										<div class="col-xs-3">
-											<input type="text" class="form-control input-sm"
-												name="dt_of_birth" placeholder="Date of Birth">
+										<div class="form-group">
+											<label class="control-label col-xs-1" for="status">
+												Gender:</label>
+											<div class="col-xs-2">
+												<select data-placeholder="" name="gender" id="gender"
+													class="form-control input-sm">
+													<option value="GENDER" selected="selected">Select
+														Gender</option>
+													<option value="MALE">MALE</option>
+													<option value="FEMALE">FEMALE</option>
+												</select>
+											</div>
+											<label class="control-label col-xs-2" for="status">
+												Date of Birth:</label>
+											<div class="col-xs-2">
+												<input type="text" class="form-control input-sm"
+													name="dt_of_birth" placeholder="Date of Birth">
+											</div>
+											<label class="control-label col-xs-2" for="status">
+												Age:</label>
+											<div class="col-xs-1">
+												<input type="text" class="form-control input-sm" id="age-yy"
+													name="age_yy" placeholder="Y">
+											</div>
+											<div class="col-xs-1">
+												<input type="text" class="form-control input-sm" id="age-mm"
+													name="age_mm" placeholder="M">
+											</div>
+											<div class="col-xs-1">
+												<input type="text" class="form-control input-sm" id="age-dd"
+													name="age_dd" placeholder="D">
+											</div>
 										</div>
 
-										<div class="col-xs-3">
-											<input type="text" class="form-control input-sm" name="age"
-												placeholder="Age (Y/M/D)">
-										</div>
 
-										<div class="col-xs-3">
-											<select data-placeholder="" name="marital_status"
-												id="marital_status" class="form-control input-sm">
-												<option value="0" selected="selected">Select
-													Marital Status</option>
-												<option value="MARRIED">MARRIED</option>
-												<option value="UNMARRIED">UNMARRIED</option>
-											</select>
-										</div>
 									</div>
 								</div>
 							</div>
 
-							<div class="col-md-3 dashboard-right-cell">
+							<div class="col-md-2 dashboard-right-cell">
 								<div class="admin-content-con">
 									<header class="clearfix">
 										<h5 class="pull-left">Photo Upload</h5>
@@ -249,7 +267,7 @@
 
 
 						<div class="row">
-							<div class="col-md-5 dashboard-left-cell">
+							<div class="col-md-4 dashboard-left-cell">
 								<div class="admin-content-con">
 									<header class="clearfix">
 										<h5 class="pull-left">Personal Info</h5>
@@ -257,9 +275,22 @@
 
 									<div class="form-horizontal">
 										<div class="form-group">
-											<label class="control-label col-xs-3" for="nationality">
+											<label class="control-label col-xs-5" for="status">
+												Marital Status:</label>
+											<div class="col-xs-7">
+												<select data-placeholder="" name="marital_status"
+													id="marital_status" class="form-control input-sm">
+													<option value="0" selected="selected">Select
+														Marital Status</option>
+													<option value="MARRIED">MARRIED</option>
+													<option value="UNMARRIED">UNMARRIED</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="control-label col-xs-5" for="nationality">
 												Nationality:</label>
-											<div class="col-xs-9">
+											<div class="col-xs-7">
 												<select data-placeholder="" name="nationality"
 													id="nationality" class="form-control input-sm">
 													<option value="0" selected="selected">Select
@@ -270,8 +301,8 @@
 											</div>
 										</div>
 										<div class="form-group">
-											<label class="control-label col-xs-3" for="religion">Religion:</label>
-											<div class="col-xs-9">
+											<label class="control-label col-xs-5" for="religion">Religion:</label>
+											<div class="col-xs-7">
 												<select data-placeholder="" name="religion" id="religion"
 													class="form-control input-sm">
 													<option value="0" selected="selected">Select
@@ -282,9 +313,9 @@
 											</div>
 										</div>
 										<div class="form-group">
-											<label class="control-label col-xs-3" for="mother_tongue">Mother
+											<label class="control-label col-xs-5" for="mother_tongue">Mother
 												Tongue: </label>
-											<div class="col-xs-9">
+											<div class="col-xs-7">
 												<select data-placeholder="" name="mother_tongue"
 													id="mother_tongue" class="form-control input-sm">
 													<option value="0" selected="selected">Select
@@ -295,9 +326,9 @@
 											</div>
 										</div>
 										<div class="form-group">
-											<label class="control-label col-xs-3" for="occupation">Occupation:
+											<label class="control-label col-xs-5" for="occupation">Occupation:
 											</label>
-											<div class="col-xs-9">
+											<div class="col-xs-7">
 												<select data-placeholder="" name="occupation"
 													id="occupation" class="form-control input-sm">
 													<option value="0" selected="selected">Select
@@ -308,8 +339,8 @@
 											</div>
 										</div>
 										<div class="form-group">
-											<label class="control-label col-xs-3" for="community">Community:</label>
-											<div class="col-xs-9">
+											<label class="control-label col-xs-5" for="community">Community:</label>
+											<div class="col-xs-7">
 												<select data-placeholder="" name="community" id="community"
 													class="form-control input-sm">
 													<option value="0" selected="selected">Select
@@ -320,9 +351,9 @@
 											</div>
 										</div>
 										<div class="form-group">
-											<label class="control-label col-xs-3" for="blood_group">Blood
+											<label class="control-label col-xs-5" for="blood_group">Blood
 												Group: </label>
-											<div class="col-xs-9">
+											<div class="col-xs-7">
 												<select data-placeholder="" name="blood_group"
 													id="blood_group" class="form-control input-sm">
 													<option value="0" selected="selected">Select Blood
@@ -332,43 +363,12 @@
 												</select>
 											</div>
 										</div>
-										<div class="form-group">
-											<label class="control-label col-xs-3">Type / Mode:</label>
-											<div class="col-xs-4">
-												<select class="form-control">
-													<option selected="selected">Type</option>
-												</select>
-											</div>
-											<div class="col-xs-4">
-												<select class="form-control">
-													<option selected="selected">Mode</option>
-												</select>
-											</div>
-										</div>
-										<div class="form-group">
-											<label class="control-label col-xs-3">STD:</label>
-											<div class="col-xs-3">
-												<input type="text" class="form-control" id="monthly_income"
-													placeholder="STD" required>
-											</div>
-											<label class="control-label col-xs-3">ISD:</label>
-											<div class="col-xs-3">
-												<input type="text" class="form-control" id="monthly_income"
-													placeholder="ISD" required>
-											</div>
-										</div>
-										<div class="form-group">
-											<label class="control-label col-xs-3">Number:</label>
-											<div class="col-xs-9">
-												<input type="text" class="form-control" id="monthly_income"
-													placeholder="Phone Number" required>
-											</div>
-										</div>
+
 									</div>
 								</div>
 							</div>
 
-							<div class="col-md-7 dashboard-right-cell">
+							<div class="col-md-8 dashboard-right-cell">
 								<div class="admin-content-con">
 									<header class="clearfix">
 										<h5 class="pull-left">Additional Info</h5>
@@ -410,39 +410,7 @@
 											</div>
 										</div>
 
-										<div class="form-group">
-											<label class="control-label col-xs-3">Type / Mode:</label>
-											<div class="col-xs-4">
-												<select class="form-control">
-													<option selected="selected">Type</option>
-												</select>
-											</div>
-											<div class="col-xs-4">
-												<select class="form-control">
-													<option selected="selected">Mode</option>
-												</select>
-											</div>
-										</div>
 
-										<div class="form-group">
-											<label class="control-label col-xs-3">STD:</label>
-											<div class="col-xs-3">
-												<input type="text" class="form-control" id="monthly_income"
-													placeholder="STD" required>
-											</div>
-											<label class="control-label col-xs-3">ISD:</label>
-											<div class="col-xs-3">
-												<input type="text" class="form-control" id="monthly_income"
-													placeholder="ISD" required>
-											</div>
-										</div>
-										<div class="form-group">
-											<label class="control-label col-xs-3">Number:</label>
-											<div class="col-xs-9">
-												<input type="text" class="form-control" id="monthly_income"
-													placeholder="Phone Number" required>
-											</div>
-										</div>
 
 										<div class="form-group">
 											<label class="control-label col-xs-3" for="identity">Identity
@@ -481,7 +449,7 @@
 											<label class="control-label col-xs-3" for="remarks">Remarks:
 											</label>
 											<div class="col-xs-9">
-												<textarea rows="3" class="form-control" id="remarks"
+												<textarea rows="1" class="form-control" id="remarks"
 													placeholder="Remarks" required></textarea>
 											</div>
 										</div>
@@ -559,18 +527,8 @@
 										<div class="form-group">
 											<label class="control-label col-xs-3" for="pin">Pin:</label>
 											<div class="col-xs-9">
-												<input type="number" class="form-control" id="pin"
+												<input type="text" class="form-control" id="pin"
 													placeholder="Pin Code" required>
-											</div>
-										</div>
-
-
-										<div class="form-group">
-											<div class="col-xs-offset-3 col-xs-9">
-												<label class="checkbox-inline"> <input
-													type="checkbox" value="agree"> Personal Address
-													same as Correspondence Address.
-												</label>
 											</div>
 										</div>
 									</div>
@@ -579,81 +537,46 @@
 							<div class="col-md-6 dashboard-right-cell">
 								<div class="admin-content-con">
 									<header class="clearfix">
-										<h5 class="pull-left">Correspondence Address</h5>
+										<h5 class="pull-left">Communication Detail</h5>
 									</header>
 
 
 									<div class="form-horizontal">
+
 										<div class="form-group">
-											<label class="control-label col-xs-3" for="type">
-												Type:</label>
-											<div class="col-xs-9">
-												<input type="text" class="form-control" id="type"
-													placeholder="Type" required>
+											<label class="control-label col-xs-3">Type / Mode:</label>
+											<div class="col-xs-4">
+												<select class="form-control">
+													<option selected="selected">Type</option>
+												</select>
 											</div>
-										</div>
-										<div class="form-group">
-											<label class="control-label col-xs-3" for="address">Address:</label>
-											<div class="col-xs-9">
-												<input type="text" class="form-control" id="address"
-													placeholder="Address" required>
-											</div>
-										</div>
-										<div class="form-group">
-											<label class="control-label col-xs-3" for="area">Area:
-											</label>
-											<div class="col-xs-9">
-												<select data-placeholder="" name="area" id="area"
-													class="form-control input-sm">
-													<option value="0" selected="selected">Select Area</option>
-													<option value="INDIAN">FATHER</option>
-													<option value="PAKISTANI">PAKISTAN</option>
+											<div class="col-xs-4">
+												<select class="form-control">
+													<option selected="selected">Mode</option>
 												</select>
 											</div>
 										</div>
+
 										<div class="form-group">
-											<label class="control-label col-xs-3" for="city">City:
-											</label>
-											<div class="col-xs-9">
-												<select data-placeholder="" name="city" id="city"
-													class="form-control input-sm">
-													<option value="0" selected="selected">Select City</option>
-													<option value="INDIAN">FATHER</option>
-													<option value="PAKISTANI">PAKISTAN</option>
-												</select>
+											<label class="control-label col-xs-3">STD:</label>
+											<div class="col-xs-3">
+												<input type="text" class="form-control" id="monthly_income"
+													placeholder="STD" required>
+											</div>
+											<label class="control-label col-xs-3">ISD:</label>
+											<div class="col-xs-3">
+												<input type="text" class="form-control" id="monthly_income"
+													placeholder="ISD" required>
 											</div>
 										</div>
 										<div class="form-group">
-											<label class="control-label col-xs-3">State:</label>
+											<label class="control-label col-xs-3">Number:</label>
 											<div class="col-xs-9">
-												<select data-placeholder="" name="guardian" id="guardian"
-													class="form-control input-sm">
-													<option value="0" selected="selected">Select
-														Guardian</option>
-													<option value="INDIAN">FATHER</option>
-													<option value="PAKISTANI">PAKISTAN</option>
-												</select>
-											</div>
-										</div>
-										<div class="form-group">
-											<label class="control-label col-xs-3" for="country">Country:
-											</label>
-											<div class="col-xs-9">
-												<input type="text" class="form-control" id="country"
-													placeholder="Country" required>
-											</div>
-										</div>
-										<div class="form-group">
-											<label class="control-label col-xs-3" for="pin">Pin:</label>
-											<div class="col-xs-9">
-												<input type="text" class="form-control" id="pin"
-													placeholder="Pin Code" required>
+												<input type="text" class="form-control" id="monthly_income"
+													placeholder="Phone Number" required>
 											</div>
 										</div>
 									</div>
-
-
-
 								</div>
 							</div>
 						</div>
@@ -673,8 +596,8 @@
 							</div>
 						</div>
 					</div>
-				
-				<!-- End of Dashboard -->
+
+					<!-- End of Dashboard -->
 				</form>
 
 				<!-- End of Registration Form -->
@@ -696,7 +619,7 @@
 
 	</div>
 
-
+<!-- End of Side bar, Header, Main Content, Footer -->
 
 
 

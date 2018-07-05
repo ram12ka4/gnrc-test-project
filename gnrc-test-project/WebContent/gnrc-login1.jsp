@@ -52,8 +52,7 @@
 
 						<div style="margin-bottom: 25px" class="input-group">
 							<span class="input-group-addon"><i
-								class="fas fa-map-marker-alt"></i></span> <select 
-								class="form-control">
+								class="fas fa-map-marker-alt"></i></span> <select class="form-control">
 								<option value="#">GNRC Dispur</option>
 								<option value="#">GNRC Six Mile</option>
 								<option value="#">GNRC North Guwahati</option>
