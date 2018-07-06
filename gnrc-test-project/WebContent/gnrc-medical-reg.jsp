@@ -17,14 +17,14 @@
 </head>
 <body>
 
-
+<!-- Side bar, Header, Main Content, Footer -->
 	<div class="container-fluid display-table">
 		<div class="row display-table-row">
 			<!-- side menu -->
 			<div
 				class="col-md-2 col-sm-1 hidden-xs display-table-cell valign-top"
 				id="side-menu">
-				<h1 class="hidden-xs hidden-sm">Navigation</h1>
+				<h1 class="hidden-xs hidden-sm">GNRC</h1>
 				<ul>
 					<li class="link"><a href="index.jsp"> <span
 							class="glyphicon glyphicon-th" aria-hidden="true"></span> <span
@@ -58,12 +58,13 @@
 					</a>
 
 						<ul class="collapse collapseable" id="collapse-registration">
-							<li><a href="gnrc-medical-reg.jsp">Medical Registration
+							<li class="link active"><a href="gnrc-medical-reg.jsp">Medical Registration
 							</a></li>
 							<li><a href="gnrc-op-reg.jsp">Outdoor Registration </a></li>
 							<li><a href="gnrc-ep-reg.jsp">External Registration </a></li>
 							<li><a href="gnrc-ip-reg.jsp">Indoor Registration </a></li>
-							<li><a href="gnrc-police-case.jsp">Police Case Detail </a></li>
+							<li><a href="gnrc-police-reg.jsp">Police Case Registration </a></li>
+							<li><a href="gnrc-emer-reg.jsp">Emergency Registration</a></li>
 						</ul></li>
 
 
@@ -623,8 +624,7 @@
 		</div>
 
 	</div>
-
-
+<!-- End of Side bar, Header, Main Content, Footer -->
 
 	<!-- JS -->
 	<%@include file="gnrc-common-include-js.html"%>

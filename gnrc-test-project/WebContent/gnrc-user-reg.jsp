@@ -22,7 +22,7 @@
 			<div
 				class="col-md-2 col-sm-1 hidden-xs display-table-cell valign-top"
 				id="side-menu">
-				<h1 class="hidden-xs hidden-sm">Navigation</h1>
+				<h1 class="hidden-xs hidden-sm">GNRC</h1>
 				<ul>
 					<li class="link"><a href="index.jsp"> <span
 							class="glyphicon glyphicon-th" aria-hidden="true"></span> <span

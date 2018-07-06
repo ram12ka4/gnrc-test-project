@@ -15,16 +15,17 @@
 </head>
 <body>
 
+
 	<!-- Side bar, Header, Main Content, Footer -->
 	<div class="container-fluid display-table">
 		<div class="row display-table-row">
-			<!-- side menu -->
+			<!-- Side Menu -->
 			<div
 				class="col-md-2 col-sm-1 hidden-xs display-table-cell valign-top"
 				id="side-menu">
 				<h1 class="hidden-xs hidden-sm">GNRC</h1>
 				<ul>
-					<li class="link"><a href="index5.jsp"> <span
+					<li class="link"><a href="index.jsp"> <span
 							class="glyphicon glyphicon-th" aria-hidden="true"></span> <span
 							class="hidden-xs hidden-sm">Dashboard</span>
 					</a></li>
@@ -41,13 +42,13 @@
 
 					<li class="link"><a href="#collapse-admin"
 						data-toggle="collapse" aria-controls="collapse-admin"> <i
-							class="fas fa-desktop"></i> <span class="hidden-xs hidden-sm">Admin</span>
-
+							class="fas fa-desktop"></i><span class="hidden-xs hidden-sm">Admin</span>
 					</a>
 
 						<ul class="collapse collapseable" id="collapse-admin">
-							<li><a href="#">User Registration </a></li>
+							<li><a href="gnrc-user-reg.jsp">User Registration</a></li>
 						</ul></li>
+
 
 					<li class="link active"><a href="#collapse-registration"
 						data-toggle="collapse" aria-controls="collapse-registration">
@@ -58,14 +59,13 @@
 						<ul class="collapse collapseable" id="collapse-registration">
 							<li><a href="gnrc-medical-reg.jsp">Medical Registration
 							</a></li>
-							<li class="link active"><a href="gnrc-op-reg.jsp">Outdoor Registration </a></li>
-							<li><a href="gnrc-ep-reg.jsp">External Registration </a></li>
+							<li><a href="gnrc-op-reg.jsp">Outdoor Registration </a></li>
+							<li class="link active"><a href="gnrc-ep-reg.jsp">External
+									Registration </a></li>
 							<li><a href="gnrc-ip-reg.jsp">Indoor Registration </a></li>
 							<li><a href="gnrc-police-reg.jsp">Police Case Registration </a></li>
 							<li><a href="gnrc-emer-reg.jsp">Emergency Registration</a></li>
 						</ul></li>
-
-
 
 
 					<li class="link"><a href="index5.jsp"> <span
@@ -84,10 +84,13 @@
 					</a></li>
 				</ul>
 			</div>
-			<!-- main content area -->
+			<!-- End of Side menu -->
+
+			<!-- Main Content area -->
 			<div class="col-md-10 col-sm-11 box display-table-cell valign-top">
 
 				<div class="row">
+
 					<header id="nav-header" class="clearfix">
 						<div class="col-md-5">
 
@@ -126,7 +129,9 @@
 							</ul>
 						</div>
 					</header>
+
 				</div>
+
 
 
 				<!-- User Registration Form -->
@@ -135,157 +140,114 @@
 					<!-- DASHBOARD -->
 					<div id="dashboard-con">
 						<div class="row">
-							<div class="col-md-6 dashboard-left-cell">
+							<div class="col-md-10 dashboard-left-cell">
 								<div class="admin-content-con">
 									<header class="clearfix">
-										<h5 class="pull-left">Patient Detail</h5>
+										<h5 class="pull-left">External Patient Info</h5>
 									</header>
 
 
 									<div class="form-horizontal">
 
 										<div class="form-group">
-											<label class="control-label col-xs-3" for="mrd"> MRD
-												Number:</label>
+											<label class="control-label col-xs-2" for="ex_no">
+												External Number:</label>
 											<div class="col-xs-3">
-												<input type="text" class="form-control input-sm" id="mrd"
-													name="mrd_number" placeholder="MRD Number">
+												<input type="text" class="form-control input-sm" id="ex_no"
+													name="mrd_number" placeholder="External Number">
 											</div>
 
-											<label class="control-label col-xs-3" for="reg_date">
-												Regn. Date:</label>
+											<label class="control-label col-xs-4" for="reg_date">
+												Registration Date:</label>
 											<div class="col-xs-3">
 												<input type="text" class="form-control input-sm"
-													id="reg_date" name="reg_date" placeholder="Regn. Date">
+													id="reg_date" name="reg_date"
+													placeholder="Registration Date">
 											</div>
-
 										</div>
 
 
 
 										<div class="form-group">
-											<label class="control-label col-xs-3" for="p_name">
+											<label class="control-label col-xs-2" for="title">
 												Patient Name:</label>
-											<div class="col-xs-3">
-												<input type="text" class="form-control input-sm" id="p_name"
-													name="p_name" placeholder="Patient Name">
+											<div class="col-xs-2">
+												<select data-placeholder="" name="title" id="title"
+													class="form-control input-sm">
+													<option value="MR">MR</option>
+													<option value="MR">MRS</option>
+													<option value="MR">DR</option>
+												</select>
 											</div>
-											<label class="control-label col-xs-3" for="p_sex">Patient
-												Sex:</label>
 											<div class="col-xs-3">
-												<input type="text" class="form-control input-sm" id="p_sex"
-													name="p_sex" placeholder="Patient Sex">
+												<input type="text" class="form-control input-sm"
+													name="first_name" placeholder="First Name">
 
 											</div>
-
+											<div class="col-xs-2">
+												<input type="text" class="form-control input-sm"
+													name="middle_name" placeholder="Middle Name">
+											</div>
+											<div class="col-xs-3">
+												<input type="text" class="form-control input-sm"
+													name="last_name" placeholder="Last Name">
+											</div>
 										</div>
 
 										<div class="form-group">
-											<label class="control-label col-xs-3" for="dt_of_bt">
-												Date of Birth:</label>
-											<div class="col-xs-3">
-												<input type="text" class="form-control input-sm"
-													id="dt_of_bt" name="dt_of_bt" placeholder="Date of Birth">
+											<label class="control-label col-xs-2" for="status">
+												Gender:</label>
+											<div class="col-xs-2">
+												<select data-placeholder="" name="gender" id="gender"
+													class="form-control input-sm">
+													<option value="GENDER" selected="selected">Select
+														Gender</option>
+													<option value="MALE">MALE</option>
+													<option value="FEMALE">FEMALE</option>
+												</select>
 											</div>
-											<label class="control-label col-xs-3" for="m_status">
-												Marital Status:</label>
-											<div class="col-xs-3">
+											<label class="control-label col-xs-1" for="status">
+												DOB:</label>
+											<div class="col-xs-2">
 												<input type="text" class="form-control input-sm"
-													id="m_status" name="m_status" placeholder="Status">
+													id="fromDate" name="fromDate" placeholder="Date of Birth">
+											</div>
+											<label class="control-label col-xs-2" for="status">
+												Age:</label>
+											<div class="col-xs-1">
+												<input type="text" class="form-control input-sm" id="age-yy"
+													name="age_yy" placeholder="Y">
+											</div>
+											<div class="col-xs-1">
+												<input type="text" class="form-control input-sm" id="age-mm"
+													name="age_mm" placeholder="M">
+											</div>
+											<div class="col-xs-1">
+												<input type="text" class="form-control input-sm" id="age-dd"
+													name="age_dd" placeholder="D">
 											</div>
 										</div>
 										<div class="form-group">
-											<label class="control-label col-xs-3" for="age"> Age:</label>
-											<div class="col-xs-9">
-												<input type="text" class="form-control input-sm" id="age"
-													name="age" placeholder="Age">
+											<label class="control-label col-xs-2" for="contact">Contact
+												Detail:</label>
+											<div class="col-xs-5">
+												<textarea rows="2" class="form-control" id="contact"
+													name="contact" placeholder="Contact Detail"></textarea>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 
-							<div class="col-md-6 dashboard-right-cell">
+							<div class="col-md-2 dashboard-right-cell">
 								<div class="admin-content-con">
 									<header class="clearfix">
-										<h5 class="pull-left">Outdoor Patient Registration Detail</h5>
+										<h5 class="pull-left">Photo Upload</h5>
 									</header>
 
+									<img id="blah" src="http://placehold.it/180" alt="your image" />
+									<input type='file' onchange="readURL(this);" />
 
-									<div class="form-horizontal">
-
-										<div class="form-group">
-											<label class="control-label col-xs-3" for="mrd">
-												Patient Number:</label>
-											<div class="col-xs-3">
-												<input type="text" class="form-control input-sm" id="mrd"
-													name="mrd_number" placeholder="MRD Number">
-											</div>
-
-											<label class="control-label col-xs-3" for="reg_date">
-												OP Regn. Date:</label>
-											<div class="col-xs-3">
-												<input type="text" class="form-control input-sm"
-													id="reg_date" name="reg_date"
-													placeholder="Registration Date">
-											</div>
-
-										</div>
-
-
-
-										<div class="form-group">
-											<label class="control-label col-xs-3" for="title">
-												Category:</label>
-											<div class="col-xs-3">
-												<select data-placeholder="" name="marital_status"
-													id="marital_status" class="form-control input-sm">
-													<option value="0" selected="selected">Category</option>
-													<option value="MARRIED">MARRIED</option>
-													<option value="UNMARRIED">UNMARRIED</option>
-												</select>
-											</div>
-											<label class="control-label col-xs-3" for="title">Validity
-												Date:</label>
-											<div class="col-xs-3">
-												<input type="text" class="form-control input-sm"
-													name="first_name" placeholder="First Name">
-											</div>
-										</div>
-
-										<div class="form-group">
-											<label class="control-label col-xs-3" for="sub_category">
-												Sub Category:</label>
-											<div class="col-xs-3">
-												<select data-placeholder="" name="marital_status"
-													id="sub_category" class="form-control input-sm">
-													<option value="0" selected="selected">Sub Category</option>
-													<option value="MARRIED">MARRIED</option>
-													<option value="UNMARRIED">UNMARRIED</option>
-												</select>
-											</div>
-											<label class="control-label col-xs-3" for="op_status">OP
-												Status:</label>
-											<div class="col-xs-3">
-												<input type="text" class="form-control input-sm"
-													id="op_status" name="op_status" placeholder="OP Status">
-											</div>
-										</div>
-
-
-										<div class="form-group">
-											<label class="control-label col-xs-3" for="card_no">
-												Card Number:</label>
-											<div class="col-xs-9">
-												<input type="text" class="form-control input-sm"
-													id="card_no" name="card_no" placeholder="Card Number">
-											</div>
-
-										</div>
-
-
-
-									</div>
 								</div>
 							</div>
 						</div>
@@ -295,8 +257,55 @@
 							<div class="col-md-6 dashboard-left-cell">
 								<div class="admin-content-con">
 									<header class="clearfix">
+										<h5 class="pull-left">External Patient Registration
+											Detail</h5>
+									</header>
+
+									<div class="form-horizontal">
+										<div class="form-group">
+											<label class="control-label col-xs-3" for="category">
+												Category:</label>
+											<div class="col-xs-5">
+												<select data-placeholder="" name="category" id="category"
+													class="form-control input-sm">
+													<option value="0" selected="selected">Select
+														Category</option>
+													<option value="MARRIED">MARRIED</option>
+													<option value="UNMARRIED">UNMARRIED</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="control-label col-xs-3" for="sub_category">
+												Sub Category:</label>
+											<div class="col-xs-5">
+												<select data-placeholder="" name="sub_category"
+													id="sub_category" class="form-control input-sm">
+													<option value="0" selected="selected">Select
+														Sub-Category</option>
+													<option value="INDIAN">INDIAN</option>
+													<option value="PAKISTANI">PAKISTAN</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="control-label col-xs-3" for="card-no">Card
+												Number:</label>
+											<div class="col-xs-7">
+												<input type="text" class="form-control input-sm"
+													id="card-no" name="card_no" placeholder="Card Number">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-md-6 dashboard-right-cell">
+								<div class="admin-content-con">
+									<header class="clearfix">
 										<h5 class="pull-left">Treatment Detail</h5>
 									</header>
+
 
 									<div class="form-horizontal">
 										<div class="form-group">
@@ -316,60 +325,13 @@
 											</div>
 										</div>
 										<div class="form-group">
-											<label class="control-label col-xs-3" for="remark">Remark:</label>
-											<div class="col-xs-7">
-												<textarea rows="2" class="form-control" id="remark"
-													placeholder="Remark"></textarea>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="col-md-6 dashboard-right-cell">
-								<div class="admin-content-con">
-									<header class="clearfix">
-										<h5 class="pull-left">Visit Detail</h5>
-									</header>
-
-
-									<div class="form-horizontal">
-										<div class="form-group">
-											<label class="control-label col-xs-3" for="visit_no">Visit
-												Number:</label>
-											<div class="col-xs-7">
-												<input type="text" class="form-control input-sm"
-													id="visit_no" name="dt_of_birth" placeholder="Visit Number">
-											</div>
-										</div>
-										<div class="form-group">
-											<label class="control-label col-xs-3" for="visit_date">Visit
-												Date:</label>
-
-											<div class="col-xs-7">
-												<input type="text" class="form-control input-sm"
-													name="visit_date" id="visit_date" placeholder="Visit Date">
-											</div>
-										</div>
-										<div class="form-group">
-											<label class="control-label col-xs-3" for="appt_no">Appointment
-												No.: </label>
-											<div class="col-xs-7">
-												<input type="text" class="form-control input-sm"
-													name="appt_number" id="appt_number"
-													placeholder="Appointment Number">
-											</div>
-										</div>
-										<div class="form-group">
-											<label class="control-label col-xs-3" for="doctor">Doctor:
+											<label class="control-label col-xs-3" for="card-no">Doctor
 											</label>
 											<div class="col-xs-7">
-												<input type="text" class="form-control input-sm"
-													name="doctor" id="doctor" placeholder="Doctor">
+												<input type="text" class="form-control input-sm" id="doctor"
+													name="doctor" placeholder="Dcotor">
 											</div>
 										</div>
-
-
 									</div>
 								</div>
 
@@ -377,6 +339,157 @@
 						</div>
 
 						<div class="row">
+							<div class="col-md-12">
+								<div class="admin-content-con">
+									<header class="clearfix">
+										<h5 class="pull-left">Referal Detail</h5>
+									</header>
+									<div class="form-inline form-multiline">
+										<div class="form-group">
+											<label for="ref-doc"> Referal
+												Doctor:</label>
+												 <input  type="text" class="form-control" id="ref-doc"
+												name="ref_doc" placeholder="Type">
+										</div>
+
+										<div class="form-group">
+											<label  for="ref-doc">
+												Referal Organisation:</label> <input type="text"
+												class="form-control" id="ref-doc" name="ref_doc"
+												placeholder="Type">
+										</div>
+									
+										
+									</div>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="row">
+								<div class="col-md-6 dashboard-left-cell">
+									<div class="admin-content-con">
+										<header class="clearfix">
+											<h5 class="pull-left">Personal Address</h5>
+										</header>
+										<div class="form-horizontal">
+											<div class="form-group">
+												<label class="control-label col-xs-3" for="type">
+													Type:</label>
+												<div class="col-xs-9">
+													<input type="text" class="form-control" id="type"
+														placeholder="Type" required>
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="control-label col-xs-3" for="address">Address:</label>
+												<div class="col-xs-9">
+													<input type="text" class="form-control" id="address"
+														placeholder="Address" required>
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="control-label col-xs-3" for="area">Area:
+												</label>
+												<div class="col-xs-9">
+													<select data-placeholder="" name="area" id="area"
+														class="form-control input-sm">
+														<option value="0" selected="selected">Select Area</option>
+														<option value="INDIAN">FATHER</option>
+														<option value="PAKISTANI">PAKISTAN</option>
+													</select>
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="control-label col-xs-3" for="city">City:
+												</label>
+												<div class="col-xs-9">
+													<select data-placeholder="" name="city" id="city"
+														class="form-control input-sm">
+														<option value="0" selected="selected">Select City</option>
+														<option value="INDIAN">FATHER</option>
+														<option value="PAKISTANI">PAKISTAN</option>
+													</select>
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="control-label col-xs-3">State:</label>
+												<div class="col-xs-9">
+													<select data-placeholder="" name="guardian" id="guardian"
+														class="form-control input-sm">
+														<option value="0" selected="selected">Select
+															Guardian</option>
+														<option value="INDIAN">FATHER</option>
+														<option value="PAKISTANI">PAKISTAN</option>
+													</select>
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="control-label col-xs-3" for="country">Country:
+												</label>
+												<div class="col-xs-9">
+													<input type="text" class="form-control" id="country"
+														placeholder="Country" required>
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="control-label col-xs-3" for="pin">Pin:</label>
+												<div class="col-xs-9">
+													<input type="text" class="form-control" id="pin"
+														placeholder="Pin Code" required>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6 dashboard-right-cell">
+									<div class="admin-content-con">
+										<header class="clearfix">
+											<h5 class="pull-left">Communication Detail</h5>
+										</header>
+
+
+										<div class="form-horizontal">
+
+											<div class="form-group">
+												<label class="control-label col-xs-3">Type / Mode:</label>
+												<div class="col-xs-4">
+													<select class="form-control">
+														<option selected="selected">Type</option>
+													</select>
+												</div>
+												<div class="col-xs-4">
+													<select class="form-control">
+														<option selected="selected">Mode</option>
+													</select>
+												</div>
+											</div>
+
+											<div class="form-group">
+												<label class="control-label col-xs-3">STD:</label>
+												<div class="col-xs-3">
+													<input type="text" class="form-control" id="monthly_income"
+														placeholder="STD" required>
+												</div>
+												<label class="control-label col-xs-3">ISD:</label>
+												<div class="col-xs-3">
+													<input type="text" class="form-control" id="monthly_income"
+														placeholder="ISD" required>
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="control-label col-xs-3">Number:</label>
+												<div class="col-xs-9">
+													<input type="text" class="form-control" id="monthly_income"
+														placeholder="Phone Number" required>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+											<div class="row">
 							<div class="col-md-6 dashboard-left-cell">
 								<div class="admin-content-con">
 									<header class="clearfix">
@@ -485,27 +598,31 @@
 							</div>
 						</div>
 
-
-						<div class="row">
-							<div class="col-md-12">
-								<div class="admin-content-con">
-									<div class="form-horizontal">
-										<div class="form-group">
-											<div style="padding-right: 16px;" class="pull-right">
-												<input type="reset" class="btn btn-default" value="Reset">
-												<input type="submit" class="btn btn-primary" value="Submit">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="admin-content-con">
+										<div class="form-horizontal">
+											<div class="form-group">
+												<div style="padding-right: 16px;" class="pull-right">
+													<input type="reset" class="btn btn-default" value="Reset">
+													<input type="submit" class="btn btn-primary" value="Submit">
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
 
-					<!-- End of Dashboard -->
+						<!-- End of Dashboard -->
 				</form>
 
 				<!-- End of Registration Form -->
+
+
+
+
+
 
 
 
@@ -522,8 +639,28 @@
 		</div>
 
 	</div>
-
 	<!-- End of Side bar, Header, Main Content, Footer -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
