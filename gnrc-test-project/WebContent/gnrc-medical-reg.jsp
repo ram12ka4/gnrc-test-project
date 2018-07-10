@@ -487,7 +487,7 @@
 					<div class="admin-content-con">
 						<div class="form-horizontal">
 							<div class="form-group">
-								<div class="pull-right">
+								<div style="padding-right: 16px;" class="pull-right">
 									<input type="reset" class="btn btn-default" value="Reset">
 									<input type="submit" class="btn btn-primary" value="Submit">
 								</div>
